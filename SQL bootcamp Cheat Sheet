@@ -1,0 +1,55 @@
+/*SQL Cheat Sheet COPY & PASTE LEARNING, each queary is built to my training module in my course. Take these queries and use them as templates. 
+
+/* Your basic statement for SQL operation. SELECT refers to columns and FROM referes to database.
+SELECT * FROM ;
+
+1.
+/*Your Basic Count Statement from a DATA base.
+
+SELECT COUNT(amount)
+FROM payment
+WHERE amount=0.00;
+
+2.
+/*Your Total sum STATEMENT, very important in using to find totals for sales, number of items sold etc.
+
+SELECT SUM(amount)
+FROM payment;
+
+3.
+/*Group by syntax, this will be used to divide the returns from the select statements above into groups. 
+
+SELECT customer_id 
+FROM payment
+GROUP BY customer_id;
+
+
+4.
+/*In this query you will group each customer by its ID, then which will sum the total amount of payment each customer ID has done. This can be used in identifying the specific amount of money each customer has spent. 
+
+SELECT customer_id,SUM(amount)
+FROM payment
+GROUP BY customer_id;
+
+4.1.1
+/* Adding Complexity to query above. In conjuction with the query above we will use this to take the 
+SELECT customer_id,SUM(amount)
+FROM payment
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC;
+
+4.2.1
+/* Here we have taken another query, objective is to find out the number movies there are per rating. NOTE: You can call a a column more than once.
+
+SELECT rating, COUNT(rating)
+FROM film
+GROUP BY rating;
+
+5.
+QUESTION: How many payments did 
+
+
+
+
+
+
